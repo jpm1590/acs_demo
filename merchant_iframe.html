@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+    <title>Prueba iFrame</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/form.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="item-wrap">
+        <div>
+            <h2>Demo - challenge</h2>
+        </div>
+        <div>
+            <form id="form1" action="http://localhost:8080/auth/challenges/initiate" method="post" target="iFrame1">
+                <input type="hidden" name="CReq"
+                    value="eyJ0aHJlZURTU2VydmVyVHJhbnNJRCI6IjhhODgwZGMwLWQyZDItNDA2Ny1iY2IxLWIwOGQxNjkwYjI2ZSIsCSJhY3NUcmFuc0lEIjoiZDdjMWVlOTktOTQ3OC00NGE2LWIxZjItMzkxZTI5YzZiMzQwIiwidGhyZWVEU1JlcXVlc3RvclVybCI6Imh0dHBzOi8vbWVyY2hhbnQuY29tL3VybCIsIm1lc3NhZ2VUeXBlIjoiQ1JlcSIsIm1lc3NhZ2VWZXJzaW9uIjoiMi4zLjAifQ" />
+                <input type="hidden" name="threeDSSessionData"
+                    value="bWVyY2hhbnQuY29tLUlELWFkYWMyNDM0LWRmNzgtNGJmYS1iY2Q5LTExY2E0Y2NkNWRjYQ" />
+            </form>
+            <iframe name="iFrame1" id="iFrame1" class="item-wrap-iframe"></iframe>
+        </div>
+    </div>
+    <script>
+        window.onload = document.getElementById('form1').submit();
+    </script>
+</body>
+
+</html>
